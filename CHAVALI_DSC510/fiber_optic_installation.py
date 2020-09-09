@@ -22,9 +22,10 @@ CompanyName = input("Enter the company's name :")
 
 CostPerFoot = 0.87
 
-# Retrieving the number of feet of fiber optic cable to be installed from the user.
+# Looping through until we get valid input from the user
 while True:
     try:
+        # Retrieving the number of feet of fiber optic cable to be installed from the user.
         installMeasurementInFeet = float(input("Enter the length of optical cable to install in feet:"))
         if installMeasurementInFeet <= 0:
           raise ValueError     # Raising value exception for negative and zero value inputs
