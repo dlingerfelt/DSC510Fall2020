@@ -12,7 +12,7 @@ print('What do people call you?')                                        # Progr
 name = input()                                                           # Definition and prompt for answer
 print('That is a funny name ' + name)                                    # Program teases you
 print('Are you alive or dead ' + name + '?')                             # Program asks another question
-status = input()                                 # Hopefully you're alive but the program asks anyway
+status = input()                                 # Hopefully, you're alive but the program asks anyway
 print(status + ' huh. Me too, in a sense')                               # Program acts relatable
 if status == 'dead' or status == 'Dead' or status == 'DEAD':             # Dead branch (includes different capitlizations)
     print('Well, technically if you are typing you are not dead')
