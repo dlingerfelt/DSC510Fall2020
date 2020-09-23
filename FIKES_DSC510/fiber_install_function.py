@@ -14,7 +14,7 @@ companyName = input("Enter name of company providing installation:")
 baseFootCost = 0.87
 
 # Assign calculated cost/foot based on length
-def footageCost(measure):
+def footageCost(measure,cost):
     if float(measure) > 100 and float(measure) <= 250:
         footCost = 0.80
     elif float(measure) > 250 and float(measure) <= 500:
@@ -22,7 +22,7 @@ def footageCost(measure):
     elif float(measure) > 500:
         footCost = 0.50
     else:
-        footCost = baseFootCost
+        footCost = cost
 
     installCost = (float(measure) * footCost)
     return installCost, footCost
@@ -49,7 +49,7 @@ while True:
 
     else:
 # run function and unpack returned tuple into variables
-        totalCost, costPerFoot = footageCost(installMeasurement)
+        totalCost, costPerFoot = footageCost(installMeasurement,baseFootCost)
 
 # run function to output the formatted invoice
         printInvoice()
