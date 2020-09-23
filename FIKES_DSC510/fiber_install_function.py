@@ -27,6 +27,13 @@ def footageCost(measure):
     installCost = (float(measure) * footCost)
     return installCost, footCost
 
+# function to format output receipt
+def printInvoice():
+    print('\n' + companyName + ' INVOICE' + '\n' + '-----------------' + '\n' + 'Feet installed: ' + str(installMeasurement))
+    print('cost/ft: $' + '{:.2f}'.format(costPerFoot) + '\n' + 'Bulk install discount: $' + '{:.2f}'.format(baseFootCost - costPerFoot) + '/ft')
+    print('-----------------' + '\n' + 'Total install cost: $' + '{:.2f}'.format(round(totalCost, 2)))
+    print('Total savings: $' + '{:.2f}'.format((baseFootCost - costPerFoot)*float(installMeasurement)))
+
 # while loop to go back to input if there is an input error
 while True:
     try:
@@ -44,13 +51,8 @@ while True:
 # run function and unpack returned tuple into variables
         totalCost, costPerFoot = footageCost(installMeasurement)
 
-
-
-# format output receipt
-        print('\n' + companyName + ' INVOICE' + '\n' + '-----------------' + '\n' + 'Feet installed: ' + str(installMeasurement))
-        print('cost/ft: $' + '{:.2f}'.format(costPerFoot) + '\n' + 'Bulk install discount: $' + '{:.2f}'.format(baseFootCost - costPerFoot) + '/ft')
-        print('-----------------' + '\n' + 'Total install cost: $' + '{:.2f}'.format(round(totalCost, 2)))
-        print('Total savings: $' + '{:.2f}'.format((baseFootCost - costPerFoot)*float(installMeasurement)))
+# run function to output the formatted invoice
+        printInvoice()
         break
 
 
