@@ -58,8 +58,6 @@ print(color.BLUE + 'Welcome, ' + cust_nm.lower() + color.END)  # print the detai
 cust_cmpy_nm = str(input("What is your company's name?\n"))
 
 
-# Feet requirement validation to check for valid input from user before evaluating the request
-
 # Function to accept the feet requirement and default cost and evaluates the discounted prices based on the feet requirement from user
 def install_cost(ft_rqt, cost_rqt):
     if 100 < round(float(ft_rqt)) <= 250:
@@ -77,19 +75,19 @@ def install_cost(ft_rqt, cost_rqt):
     return total_install_cost, calc_cost_per_ft
 
 
+# Feet requirement validation block.
 while True:
     try:
-        # Retrieving the number of feet of fiber optic cable to be installed from the user.
         ft_rqt = float(input(
             "Please enter number of feet of fiber optic cable to be installed: \n"))
         if ft_rqt <= 0:
-            raise ValueError  # Raising value exception for negative and zero value inputs
+            raise ValueError
     except ValueError:
         print(
             color.RED + "Invalid Input -  Please enter a valid number > 0 to process the request" + color.END)
     else:
         total_cost, disc_cost_per_ft = install_cost(ft_rqt,
-                                                    svc_fee_default)  # split the values and assign to respective variables
+                                                    svc_fee_default)
         break
 
 
