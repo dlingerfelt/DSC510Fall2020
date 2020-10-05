@@ -15,6 +15,7 @@
 #Calculations performed: Addition, Subtraction, Multiplication, Division and Average
 
 #This section will get User's name and Welcome User to the program
+from typing import List
 
 print('Welcome to My Basic Calculator!')
 name = input('What is your name?')
