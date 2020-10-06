@@ -4,6 +4,13 @@
 # Author: David Brehm
 # 09/28/2020
 
+# Change#:1
+# Change(s) Made: Added change log
+# Date of Change: 10/03/2020
+# Author: David Brehm
+# Change Approved by: David Brehm
+# Date Moved to Production: 10/03/2020
+
 def performCalculation(op):
     """
     Parameter: Operation to be performed.
@@ -64,7 +71,8 @@ print('We are going to be doing math. Type "Quit" as the calculation selection t
 
 while True:  # Main loop.
     while True:
-        func = input('Which calculation would you like to perform (Operations, Average): ')  # Prompt calculation choice.
+        func = input(
+            'Which calculation would you like to perform (Operations, Average): ')  # Prompt calculation choice.
         if func == 'Quit':  # Ending the loop.
             break
         elif func in calcList:  # Proceed to running the calculation.

@@ -1,0 +1,56 @@
+#DSC 510
+#Week 5
+#Programming Assignment Week 5
+#Author Carla J Bradley
+#10/02/2020
+
+#Display a welcome message for your user.
+print ('      Welcome   ')
+
+#Function reflect calculation
+def performcalculation (value1, value2, calculation):
+
+    if calculation == str('+') : total = (value1+value2)
+    elif calculation == str('-'): total = (value1-value2)
+    elif calculation == str('*'): total = (value1*value2)
+    elif calculation == str('/'): total = (value1/value2)
+    return total
+
+#Calculate the average of multiple numbers input by the user.
+def calculateAverage ():
+    total = 0
+    numberofvalues = int (input('Average Calculator:  Enter the number of values \n'))
+
+    for numberofCalc  in range(1, numberofvalues+1):
+        inputnumber = int (input ('Enter a number \n'))
+        total = total + inputnumber
+
+    average = (float (total) / numberofvalues)
+    return  average
+
+## prompt user for the operation they wish to perform
+# and how many numbers they wish to input
+while True:
+      choose_program = 0
+      choose_program = input ('Choose 1 for Basic Calculation  \n'
+                              'Choose 2 for Average Calculation \n'
+                              'Choose 3 to Exit  \n')
+
+
+      if choose_program=='1':
+          calculation = input('Please enter operation desired + - * /  \n')
+          value1 = input('Please enter the first value\n')
+          value2 = input('Please enter the second value \n')
+
+          mytotal = performcalculation(float (value1),float (value2),calculation)
+          print (mytotal)
+      if choose_program=='2':
+          CalcAverage = float (calculateAverage())
+#Will print the calculated average.
+          print ('The Average is', (CalcAverage) )
+      if choose_program=='3': break
+print ('    Good Bye   ')
+
+
+
+
