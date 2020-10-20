@@ -1,0 +1,34 @@
+#DSC 510                            # Change Log
+#Week 6                             # No changes
+#Author Carla J Bradley
+#10/09/2020
+
+print (' Hello! Please enter the list of temperatures or Enter -99 when you are finished.  ')
+Sentinel= -99   # Sentinel
+temperature_list=[] # Empty list
+
+# Allows to input temperatures values
+while True:
+    try:
+      Value_Temp = float(input())
+    except ValueError:
+            print('Please enter a numerical value.')
+            continue
+
+# Breaks the Sentinel
+    if Value_Temp == Sentinel:
+        break
+    temperature_list.append (Value_Temp)
+print(temperature_list)
+
+#Calculate high and low temperature
+Lowest_temperature = min(temperature_list)
+Highest_temperature = max(temperature_list)
+Count = len(temperature_list)
+
+#Print low and high values entered
+print('This  ', (Count))
+print('This is the lowest temperature ', (Lowest_temperature))
+print('This is the highest temperature ', (Highest_temperature))
+print ('End of Program ....' , 'Good bye! ')
+
