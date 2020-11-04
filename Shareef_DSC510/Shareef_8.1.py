@@ -12,7 +12,6 @@
 # Date Moved to Production: 10/23/2020
 
 import string
-import re
 def add_word(dict,word):
     #check if word is already in dictionary
     if word not in dict:
@@ -38,7 +37,6 @@ def pretty_print(dict):
 def main():
     gba_file = open('gettysburg.txt', 'r')  # Input file.
     dict = {}
-    add_word(dict,"yo")
     lines = [line.rstrip('\n') for line in gba_file]  # getting rid of newline chars
     Process_line(dict, lines)
     pretty_print(dict)  # Print results.
