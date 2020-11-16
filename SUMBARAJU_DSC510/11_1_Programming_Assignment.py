@@ -1,6 +1,6 @@
 # DSC 510
 
-# Week 5
+# Week 11
 
 # Programming Assignment Week 11 - 11_1_Programming_Assignment.py
 
